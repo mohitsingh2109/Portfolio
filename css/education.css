@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.skill-category li {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.sidebar {
+    width: 30%;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ecf0f1;
+}
+
+.profile h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #ecf0f1;
+}
+
+.profile p {
+    color: #bdc3c7;
+    font-size: 1rem;
+    margin: 5px 0 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background: #3498db;
+    color: white;
+}
+
+.main-content {
+    width: 70%;
+    padding: 40px;
+    background: #f4f7f6;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.education-item {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h2 {
+    font-size: 1.6rem;
+    color: #3498db;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.education-item .institution {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+.education-item .years {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.education-item .description {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #95a5a6;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .education {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar .profile h2 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar .profile p {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+
+    .education {
+        gap: 20px;
+    }
+
+    .education-item h2 {
+        font-size: 1.4rem;
+    }
+
+    .education-item .institution {
+        font-size: 1rem;
+    }
+
+    .education-item .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sidebar .profile h2 {
+        font-size: 1.2rem;
+    }
+
+    .sidebar .profile p {
+        font-size: 0.8rem;
+    }
+
+    .education {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        font-size: 0.8rem;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
